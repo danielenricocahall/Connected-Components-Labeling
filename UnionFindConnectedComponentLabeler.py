@@ -10,11 +10,12 @@ MAXLAB = 100
 
 class UnionFindConnectedComponentLabeler(ConnectedComponentLabeler):    
     
-    parent = []
 
     def __init__(self):
+        self.parent = []
         for _ in range(0, MAXLAB):
             self.parent.append(0)
+        self.num_labels = 0;
         
     def union(self, X, Y):
         j = int(X);
@@ -60,6 +61,7 @@ class UnionFindConnectedComponentLabeler(ConnectedComponentLabeler):
     
     def makeLabelsContiguous(self, LB):
         unique_labels = np.unique(LB)
+        self.num_labels = len(unique_labels)
         for i, label in enumerate(unique_labels):
             LB[LB == label] = i
         return LB
@@ -88,3 +90,6 @@ class UnionFindConnectedComponentLabeler(ConnectedComponentLabeler):
                     LB[i,j] = self.find(LB[i,j])
         LB = self.makeLabelsContiguous(LB)
         return LB
+    
+    def getNumberOfLabels(self):
+        return self.num_labels;

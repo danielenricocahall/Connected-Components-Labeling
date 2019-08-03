@@ -14,7 +14,7 @@ from UnionFindConnectedComponentLabeler import UnionFindConnectedComponentLabele
 
 def main():
     if len(sys.argv[1:]) == 0:
-        sys.argv[1:] = ["example_img_2.txt", "example_img_3.txt", "example_img_1.txt"]
+        sys.argv[1:] = ["example_img_1.txt", "example_img_2.txt", "example_img_3.txt"]
         
     imgs = []
     for arg in sys.argv[1:]:
@@ -47,6 +47,7 @@ def main():
             ax.text(i,j,int(label),ha='center',va='center')
 
         plt.show()
+        del labeler
     
 if __name__== "__main__":
     main()
