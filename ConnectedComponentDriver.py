@@ -14,7 +14,7 @@ from UnionFindConnectedComponentLabeler import UnionFindConnectedComponentLabele
 
 def main():
     if len(sys.argv[1:]) == 0:
-        sys.argv[1:] = ["example_img_1.txt", "example_img_2.txt", "example_img_3.txt"]
+        sys.argv[1:] = ["Data/example_img_1.txt", "Data/example_img_2.txt", "Data/example_img_3.txt"]
         
     imgs = []
     for arg in sys.argv[1:]:
