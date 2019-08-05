@@ -3,7 +3,7 @@ Created on Feb 12, 2019
 
 @author: daniel
 '''
-from ConnectedComponentLabeler import ConnectedComponentLabeler
+from ConnectedComponentsLabeler.ConnectedComponentLabeler import ConnectedComponentLabeler
 import numpy as np
 MAXLAB = 100
 

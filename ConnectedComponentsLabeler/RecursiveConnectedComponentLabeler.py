@@ -4,8 +4,7 @@ Created on Feb 12, 2019
 @author: daniel
 '''
 
-from ConnectedComponentLabeler import ConnectedComponentLabeler
-
+from ConnectedComponentsLabeler.ConnectedComponentLabeler import ConnectedComponentLabeler
 class RecursiveConnectedComponentLabeler(ConnectedComponentLabeler):
     
     def findComponent(self, LB, label):

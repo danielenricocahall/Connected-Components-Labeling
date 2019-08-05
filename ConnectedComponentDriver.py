@@ -7,10 +7,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 import math
 import sys
+from ConnectedComponentsLabeler.RecursiveConnectedComponentLabeler import RecursiveConnectedComponentLabeler
+from ConnectedComponentsLabeler.UnionFindConnectedComponentLabeler import UnionFindConnectedComponentLabeler
 
-from RecursiveConnectedComponentLabeler import RecursiveConnectedComponentLabeler
-from UnionFindConnectedComponentLabeler import UnionFindConnectedComponentLabeler
-    
 
 def main():
     if len(sys.argv[1:]) == 0:
