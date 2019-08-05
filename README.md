@@ -9,6 +9,6 @@ recursive and union-find. Both of these implementations are based on the pseudoc
 
 
 ## Results ##
-![alt text](https://github.com/danielenricocahall/Connected-Components-Labeling/blob/master/conn_comp_ex_1.png)
-![alt text](https://github.com/danielenricocahall/Connected-Components-Labeling/blob/master/conn_comp_ex2.png)
-![alt text](https://github.com/danielenricocahall/Connected-Components-Labeling/blob/master/conn_comp_ex_3.png)
+![alt text](https://github.com/danielenricocahall/Connected-Components-Labeling/blob/master/Figures/conn_comp_ex_1.png)
+![alt text](https://github.com/danielenricocahall/Connected-Components-Labeling/blob/master/Figures/conn_comp_ex2.png)
+![alt text](https://github.com/danielenricocahall/Connected-Components-Labeling/blob/master/Figures/conn_comp_ex_3.png)
