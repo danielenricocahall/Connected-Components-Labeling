@@ -4,6 +4,11 @@ import numpy as np
 
 
 class ConnectedComponentLabeler(ABC):
+    labeler_type = None
+
+    @classmethod
+    def get_labeler(cls, labeler_type: str):
+        return next(x for x in cls.__subclasses__() if x.labeler_type == labeler_type)()
 
     @abstractmethod
     def label_components(self, B):
@@ -11,6 +16,7 @@ class ConnectedComponentLabeler(ABC):
 
 
 class RecursiveConnectedComponentLabeler(ConnectedComponentLabeler):
+    labeler_type = "recursive"
 
     def find_components(self, label_img, label):
         max_rows, max_cols = label_img.shape
@@ -63,6 +69,7 @@ def get_labels(label_img, i, j, indices):
 
 
 class UnionFindConnectedComponentLabeler(ConnectedComponentLabeler):
+    labeler_type = "union"
 
     def __init__(self):
         self.parent = []

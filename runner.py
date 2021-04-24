@@ -1,22 +1,30 @@
-import matplotlib.pyplot as plt
 import math
-import sys
-from labelers.connected_component_labelers import *
+import argparse
+import matplotlib.pyplot as plt
+import numpy as np
+from labelers.connected_component_labelers import ConnectedComponentLabeler
 
 
 def main():
-    if len(sys.argv[1:]) == 0:
-        sys.argv[1:] = ["Data/example_img_1.txt", "Data/example_img_2.txt", "Data/example_img_3.txt"]
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-l", "--labeler", help="Labeler type", type=str, default="union")
+    parser.add_argument('images', nargs='*')
+    args = parser.parse_args()
+
+    if not args.images:
+        images = ["test_data/example_img_1.txt", "test_data/example_img_2.txt", "test_data/example_img_3.txt"]
+    else:
+        images = args.images
 
     imgs = []
-    for arg in sys.argv[1:]:
+    for arg in images:
         text_file = open(arg, "r")
         lines = text_file.read().split(',')
         vals = [int(line) for line in lines]
         imgs.append(np.array(vals))
 
     for img in imgs:
-        labeler = RecursiveConnectedComponentLabeler()
+        labeler = ConnectedComponentLabeler.get_labeler(args.labeler)
 
         s = int(math.sqrt(img.shape[0]))
         img = np.reshape(img, (s, s))
