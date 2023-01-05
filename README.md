@@ -17,9 +17,9 @@ python --labeler recursive IMAGE1
  Default labeler is `union`, and default images are the images in `test_data` directory.
 
 ## Results ##
-![alt text](https://github.com/danielenricocahall/Connected-Components-Labeling/blob/master/Figures/conn_comp_ex_1.png)
-![alt text](https://github.com/danielenricocahall/Connected-Components-Labeling/blob/master/Figures/conn_comp_ex2.png)
-![alt text](https://github.com/danielenricocahall/Connected-Components-Labeling/blob/master/Figures/conn_comp_ex_3.png)
+![alt text](https://github.com/danielenricocahall/Connected-Components-Labeling/blob/master/figures/conn_comp_ex_1.png)
+![alt text](https://github.com/danielenricocahall/Connected-Components-Labeling/blob/master/figures/conn_comp_ex2.png)
+![alt text](https://github.com/danielenricocahall/Connected-Components-Labeling/blob/master/figures/conn_comp_ex_3.png)
 
 ## Notes
 I believe there are a few bugs in these implementations which need to be addressed - will need to revisit.
